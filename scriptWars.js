@@ -519,7 +519,7 @@ function calcResult(number1,number2,sign){
     }
 
 }
-console.log(calcResult(num1,num2,signPrompt))
+calcResult(num1,num2,signPrompt)
 
 //Complete the solution so that the function will break up camel casing, using a space between words.
 function solutionn(string){
@@ -533,7 +533,7 @@ function solutionn(string){
         }
     })
 }
-console.log(solutionn('camelCasing'))
+solutionn('camelCasing')
 
 //Take 2 strings s1 and s2 including only letters from a to z.
 // Return a new sorted string, the longest possible,
@@ -544,9 +544,43 @@ function findShort(s){
     let word = arrayOfWords.map(t => ({str: t, size: t.length})).sort((a,b)=>(a.size-b.size))[0].str
     return word.length
 }
-console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+findShort("bitcoin take over the world maybe who knows perhaps")
 
+//Build a function that returns an array of integers from n to 1 where n>0.
+//
+// Example : n=5 --> [5,4,3,2,1]
 
+const reverseSeq = n => {
+    let array = [];
+    for (let i = 1; i <= n; i++){
+        array.push(i)
+    }
+    return array.reverse()
+};
+reverseSeq(5)
+
+//Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+
+const quarterOf = (month) => {
+    if (month >= 1 && month <= 3){
+        return 1
+    } else if (month >= 4 && month <= 6){
+        return 2
+    } else if (month >= 7 && month <= 9){
+        return 3
+    } else if (month >= 10 && month <= 12){
+        return 4
+    }
+}
+quarterOf(5)
+
+// You just have to check if your number of building blocks is a perfect square.
+
+const isSquare = function(n){
+    let result = Math.sqrt(n);
+    return (result % 1 === 0)
+}
+console.log(isSquare(4))
 
 
 
