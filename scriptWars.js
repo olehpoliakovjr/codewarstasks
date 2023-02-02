@@ -582,10 +582,66 @@ const isSquare = function(n){
 }
 console.log(isSquare(4))
 
+// Take an array and remove every second element from the array.
+// Always keep the first element and start removing with the next element.
+// удалить каждий второй єлемент 
+function removeEveryOther(arr){
+    if (arr.length >= 3){
+    } else {
+        return arr;
+    }
+}
+removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])
 
+function accum(s) {
+    let array = s.split("").map((c,b) => (c.toUpperCase() + c.toLowerCase().repeat(b)))
+    return array
+}
+console.log(accum("abcd"))
 
+//
 
+function boolToWord( bool ){
+    if (bool == true){
+        return `Yes`
+    } else {
+        return `No`
+    }
+}
 
+//Count the number of divisors of a positive integer n.  Random tests go up to n = 500000.
+
+function getDivisorsCnt(n){
+    let out = 0;
+    for (let i = 0; i <= n; i++){
+        if ( n % i === 0 ){
+            out++
+        }
+    }
+    return out
+}
+console.log(getDivisorsCnt(4))
+
+//
+
+function removeSmallest(numbers) {
+    return numbers.sort((a,b) => a - b).slice(1)
+}
+console.log(removeSmallest([5, 3, 2, 1, 4]))
+
+//
+
+function doubleChar(str) {
+    let result;
+    let eachSymbol = str.split("").map(c => c + c).join("")
+    return eachSymbol
+}
+console.log(doubleChar("hello"))
+
+function noSpace(x){
+    return x.replace(/ /g,'');
+}
+noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
 
 
 
