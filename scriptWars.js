@@ -643,7 +643,17 @@ function noSpace(x){
 }
 noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
 
+// Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
 
+function correct(string) {
+    let arr = []
+    let res = string.split("")
+        for (let later of res){
+            arr += later.replace(0,"O").replace(1,"I").replace(5,"S")
+        }
+    return arr;
+}
+console.log(correct("51NGAP0RE"))
 
 
 
