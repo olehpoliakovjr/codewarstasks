@@ -653,12 +653,159 @@ function correct(string) {
         }
     return arr;
 }
-console.log(correct("51NGAP0RE"))
+correct("51NGAP0RE")
+
+// Implement the function which takes an array containing the names of people that like an item.
+// It must return the display text as shown in the examples:
+
+function likes(names) {
+        if (names.length == 0){
+            return `no one likes this`
+        } else if(names.length == 1){
+            return `${names[0]} likes this`
+        } else if(names.length == 2){
+            return `${names[0]} and ${names[1]} like this`
+        } else if(names.length == 3){
+            return `${names[0]}, ${names[1]} and ${names[2]} like this`
+        } else if (names.length >= 4){
+            return `${names[0]}, ${names[1]} and ${[...names].length - 2} others like this`
+        }
+}
+likes(['Max', 'Jacob', 'Mark', 'Max',"Artem"]);
+
+//Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.
+// Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+function rentalCarCost(d) {
+    let rentPerDay = 40
+    if (d >= 7){
+        return rentPerDay * d - 50;
+    }
+    else if (d >= 3){
+        return rentPerDay * d - 20;
+    } else {
+        return rentPerDay * d
+    }
+}
+rentalCarCost(7)
+
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+function findUniq(arr) {
+   return  arr.sort((a,b) => b - a)
+}
+console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]))
+
+function createNimber(){
+    console.log(`values`)
+}
+setTimeout(createNimber,1000)
+
+// Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+    return str.replace(/[aeiou]/gi,"").length - 1;
+}
+console.log(getCount("abracadabra"))
+
+// Write a program that returns the girl's age (0-9) as an integer.
+
+function getAge(inputString){
+    return Number(inputString.charAt(0));
+}
+console.log(getAge("4 years old"))
+
+// Write a program that finds the summation of every number from 1 to num.
+//  The number will always be a positive integer greater than 0.
+
+var summation = function (num) {
+    let result = 0;
+    for(let i = 0; i <= num; i++){
+        result += i;
+    }
+    return result;
+}
+console.log(summation(8))
+
+//
+
+function paperwork(n, m) {
+    if(n < 0 || m < 0){
+        return 0
+    } else {
+        return n * m
+    }
+}
+paperwork(2,3)
+
+//
+
+function finalGrade (exam, projects) {
+    if(exam > 90 || projects > 10){
+        return 100;
+    } else if (exam > 75 && projects >= 5){
+        return 90;
+    } else if (exam > 50 && projects >= 2){
+        return 75;
+    } else {
+        return 0;
+    }
+}
+console.log(finalGrade(85, 5))
+
+//
+
+function lovefunc(flower1, flower2){
+    if((flower1 + flower2) % 2 === 0){
+        return false
+    } else {
+        return true
+    }
+}
+
+//
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    if(distanceToPump <= mpg * fuelLeft) return true
+    else return false
+};
 
 
+//Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+// If no occurrences can be found, a count of 0 should be returned.
 
+function strCount(str, letter){  
+    let times = 0;
+    let string = str.split("")
+        for(let le of string){
+            if(le.includes(letter)){
+                times += 1
+            }
+        }
+        return times;
+}
+console.log(strCount("Hello","l"))
 
+// Complete the square sum function 
+// so that it squares each number passed into it and then sums the results together.
 
+function squareSum(numbers){
+    let value = 0;
+        for(let number of numbers){
+            value += Math.pow(number,2)
+        }
+    return value;
+}
+console.log(squareSum([1,2]))
+
+// Write a function that returns both the minimum and maximum number of the given list/array.
+
+function minMax(arr){
+    let array;
+}
+console.log(minMax([2334454,5,3,1,232,42,13]))
 
 
 
